@@ -1,0 +1,22 @@
+{
+  "name": "passe-panic",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Passé Panic multiplayer French grammar survival game",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check world.js && node --check data/choices.js && node --check public/game.js && node --check public/render.js && node --check test/world.test.js && node --check test/choices.test.js",
+    "test": "npm run check && node test/choices.test.js && node test/world.test.js",
+    "test:e2e": "node test/e2e.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
